@@ -43,7 +43,7 @@ const Header = () => {
               <DateRange
                 className="calendar"
                 editableDateInputs={true} // 讓日期可被選取、輸入
-                moveRangeOnFirstSelection={true}
+                moveRangeOnFirstSelection={false}
                 onChange={ (item) => setDates([item.selection])}
                 minDate={new Date()}
                 ranges={dates}
