@@ -66,6 +66,53 @@
                     border: 1px lightgray solid;
                     box-shadow: 0 0 15px lightgray;
                 }
+
+                .ConditionsContainer {
+                    position: absolute;
+                    top: 60px;
+                    right: 0;
+                    // width: auto;
+                    background-color: white;
+                    box-shadow: 0 0 15px lightgray;
+                    border-radius: 5px;
+                    padding: 10px 40px;
+                    cursor: default; // 禁止他一靠近就變成pointer
+
+                    .condition {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between; // 把文字跟conditionCounter分開，一左一右
+                        width: 400px;
+                        height: 60px;
+                        // 小孩下面的歲數文字
+                        p {
+                            font-size: 14px;
+                            color: gray;
+                        }
+                        .conditionCounter {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            width: 100px;
+
+                            .conditionCounterButton {
+                                width: 30px;
+                                height: 30px;
+                                background-color: white;
+                                color: var(--primary-color);
+                                border-radius: 2px;
+                                border: 1px solid var(--primary-color);
+                                cursor: pointer;
+                                &:hover {
+                                    background-color: rgba(53, 164, 127, 0.1);
+                                }
+                                &:disabled {
+                                    cursor: not-allowed;
+                                }
+                            }
+                        }
+                    }
+                }
             }
             .SearchBarBtn {
                 border: none;
