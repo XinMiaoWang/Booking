@@ -1,0 +1,75 @@
+.announcement {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: auto;
+
+    .container {
+        max-width: 1024px;
+        width: 100%;
+        padding: 0 20px;
+        .checktext {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+
+            input {
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+            }
+        }
+        .infoDes {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            border: 1px lightgray solid;
+
+            svg {
+                color: rgb(251, 144, 4);
+                background-color: bisque;
+                height: 20px;
+                width: 20px;
+                padding: 20px;
+                margin-right: 20px;
+            }
+        }
+        .discountInfo {
+            margin-top: 20px;
+            gap: 10px;
+            height: 160px;
+            padding: 5px 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.145);
+            border-radius: 5px;
+
+            .left {
+                width: 150px;
+                img {
+                    display: flex;
+                    width: 120px;
+                }
+            }
+            .right {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                button {
+                    width: 80px;
+                    background-color: var(--primary-color);
+                    color: white;
+                    border: none;
+                    border-radius: 2px;
+                    padding: 10px 5px;
+                    cursor: not-allowed; // 禁止點擊
+                }
+            }
+        }
+    }
+}
+
+
+
