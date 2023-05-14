@@ -1,0 +1,10 @@
+.postcards {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    .line {
+        width: 100%;
+        display: flex;
+        // flex-wrap: wrap;
+    }
+}

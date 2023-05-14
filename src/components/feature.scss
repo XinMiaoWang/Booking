@@ -1,0 +1,21 @@
+.feature {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; // 將超出的部分自動隱藏
+
+    .container {
+        width: 100%;
+        max-width: 1024px;
+        // listTitle和listItems會在container中自動靠右排列
+        .listTitle {
+            padding: 15px 10px;
+        }
+        .listItems {
+            padding: 0 10px;
+            display: flex; // 讓item可以橫向排列
+            overflow-x: scroll; // 將超出範圍的部分設定成可以滑動
+        }
+    }
+}
