@@ -1,7 +1,8 @@
 import React from "react";
 import Categories from "../subcomponents/Categories";
 import PostCards from   "../subcomponents/PostCards";
-import {CategoriesType, CategoriesCities} from "../data";
+import PopularHotels from "../subcomponents/PopularHotels";
+import {CategoriesType, CategoriesCities, PopularHotelsData} from "../data";
 
 import './feature.scss';
 
@@ -25,6 +26,12 @@ const Feature = () => {
                 </div>
                 <div className="listItems">
                     <Categories dataArray={CategoriesCities}/>
+                </div>
+                <div className="listTitle">
+                    <h2>人氣民宿、公寓類型住宿</h2>
+                </div>
+                <div className="listItems">
+                    <PopularHotels dataArray={PopularHotelsData} />
                 </div>
             </div>
         </div>
