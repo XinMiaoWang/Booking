@@ -1,0 +1,45 @@
+.GlobalBanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin-top: 20px;
+    border: 1px lightgray solid;
+    border-radius: 5px;
+    background-repeat: no-repeat; // 背景導入方式
+    background-position: right; // 背景圖(世界地圖)靠右
+    background-image: url("https://cf.bstatic.com/static/img/genius-banner-world-bg/2b5cdbad7b92073bc396b8b59d0bb421b3a01cba.png");
+    
+    img {
+        width: 180px;
+    }
+
+    .BannerInfoDes {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; // 讓h2, span, Bannerbtn有間距
+        h2 {
+            font-weight: 700;
+        }
+
+        .Bannerbtn {
+            display: flex;
+            gap: 10px; // 登入, 註冊 btn有間距
+            button {
+                padding: 8px 15px;
+                background-color: white;
+                color: var(--primary-color);
+                border: 1px var(--primary-color) solid;
+                border-radius: 2px;
+                cursor: pointer;
+                &:hover {
+                    background-color: rgba(53, 164, 127, 0.1);
+                }
+            }
+            button:last-child {
+                // 註冊按鈕不要有外框
+                border: none;
+            }
+        }
+    }
+}
