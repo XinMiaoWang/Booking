@@ -19,9 +19,11 @@
 
             .left {
                 display: flex;
-                span {
+                .logo {
                     font-size: 20px;
                     font-weight: 500;
+                    color: inherit; // 防止logo變色
+                    text-decoration: none; // 防止logo變色
                 }
             }
             .right {

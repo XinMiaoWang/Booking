@@ -2,6 +2,8 @@ import React from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBed, faPlane, faCar, faToriiGate, faTaxi } from '@fortawesome/free-solid-svg-icons'
+import {Link} from "react-router-dom"
+
 import "./navbar.scss"
 
 const Navbar = () => {
@@ -10,7 +12,7 @@ const Navbar = () => {
       <div className="navbarContainer">
         <div className="lineOne">
           <div className="left">
-            <div className="span">SAM.BOOKING</div>
+            <Link to="/" className="logo">SAM.BOOKING</Link>
           </div>
           <div className="right">
             <div className="navButtonFlag"></div>

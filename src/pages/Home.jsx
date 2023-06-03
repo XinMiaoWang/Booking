@@ -6,6 +6,7 @@ import Feature from '../components/Feature'
 import Footer from '../components/Footer'
 import GlobalBanner from '../components/GlobalBanner'
 
+
 import './home.scss'
 
 const Home = () => {

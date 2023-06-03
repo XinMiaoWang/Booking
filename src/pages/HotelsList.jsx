@@ -4,30 +4,23 @@ import * as locales from 'react-date-range/dist/locale';
 import { DateRange } from "react-date-range";
 import format from 'date-fns/format';
 import SearchItem from "../components/SearchItem";
+import { useLocation } from "react-router-dom";
 
 import './hotelsList.scss';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 
 
+
 const HotelsList = () => {
+    const location = useLocation();
+    console.log(location);
     const [openCalendar, setOpenCalendar] = useState(false);
     const [openConditions, setOpenConditions] = useState(false);
 
-    const [dates, setDates] = useState([
-        {
-            startDate: new Date(),
-            endDate: new Date(),
-            key: 'selection'
-        }
-    ]);
-    const [conditions, setConditions] = useState(
-        {
-            adult: 1,
-            children: 0,
-            room: 1
-        }
-    );
+    const [destination, setDestination] = useState(location.state?.destination);
+    const [conditions, setConditions] = useState(location.state?.conditions);
+    const [dates, setDates] = useState(location.state?.dates);
 
     const handleCounter = (name, sign) => {
         setConditions( prev => {
@@ -48,7 +41,10 @@ const HotelsList = () => {
                         {/* 地址 搜尋欄 */}
                         <div className="listItem">
                             <label>目的地/住宿名稱:</label>
-                            <input type="text" className="searchInput" placeholder="要去哪裡?" />
+                            <input type="text" className="searchInput" 
+                            placeholder={ (destination==="") ? "要去哪裡?" : destination }
+                            onChange={ (e) => setDestination(e.target.value) }
+                            />
                         </div>
                         {/* 日期 搜尋欄 */}
                         <div className="listItem">
