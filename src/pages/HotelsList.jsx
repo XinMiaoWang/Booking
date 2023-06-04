@@ -1,5 +1,6 @@
 import React, { useState }from "react";
 import Narbar from "../components/Navbar";
+import Footer from "../components/Footer"
 import * as locales from 'react-date-range/dist/locale';
 import { DateRange } from "react-date-range";
 import format from 'date-fns/format';
@@ -145,6 +146,8 @@ const HotelsList = () => {
                     </div>
                 </div>
             </div>
+
+            <Footer />
         </div>
     );
 }
